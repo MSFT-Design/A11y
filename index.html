@@ -116,21 +116,6 @@
     });
   });
 
-  // Enforce tab to only go through .entry buttons
-  const entries = document.querySelectorAll('.entry');
-  entries.forEach((btn, i) => {
-    btn.addEventListener('keydown', e => {
-      if (e.key === 'Tab' && !e.shiftKey) {
-        e.preventDefault();
-        const next = entries[i + 1];
-        if (next) next.focus();
-      } else if (e.key === 'Tab' && e.shiftKey) {
-        e.preventDefault();
-        const prev = entries[i - 1];
-        if (prev) prev.focus();
-      }
-    });
-  });
 </script>
 
 </body>
